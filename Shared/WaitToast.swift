@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import HypercutNativeUI
 
 struct WaitToast: View {
   
@@ -30,18 +31,10 @@ struct WaitToast: View {
   
   var diameter: CGFloat = 8
   
-  var animation: Animation? {
-    state == .waiting ? .easeInOut(duration: 1) : .none
-  }
-  
   @State var timer = Timer.publish(every: 1.6, on: .main, in: .common).autoconnect()
   
   var foregroundColor: Color {
     state == .waiting ? .accentColor : .black.opacity(0.05)
-  }
-  
-  var height: CGFloat {
-    state == .waiting ? 120 : 80
   }
   
   var body: some View {
@@ -54,18 +47,18 @@ struct WaitToast: View {
         completedBody
       }
     }
-    .frame(height: height)
-    .animation(.easeInOut)
+    .frame(height: 80)
+    .animation(.easeInOut, value: state)
   }
   
   var loadingBody: some View {
-    VStack {
-      Spacer()
+    HStack {
+      loadingIndicator
+        .padding(10)
       animatedText
       Spacer()
-      loadingIndicator
     }
-    .padding(40)
+    .padding(10)
   }
   
   var completedBody: some View {
@@ -89,30 +82,9 @@ struct WaitToast: View {
   }
   
   var loadingIndicator: some View {
-    GeometryReader { geometry in
-      ZStack(alignment: .center) {
-        Circle()
-          .fill(Color.white.opacity(0.9))
-          .frame(width: diameter, height: diameter)
-          .offset(x: (geometry.size.width - diameter / 2) * leftOffset)
-          .animation(animation)
-        Circle()
-          .fill(Color.white)
-          .frame(width: diameter, height: diameter)
-          .offset(x: (geometry.size.width - diameter / 2) * leftOffset)
-          .animation(animation?.delay(0.2))
-        Circle()
-          .fill(Color.white.opacity(0.9))
-          .frame(width: diameter, height: diameter)
-          .offset(x: (geometry.size.width - diameter / 2) * leftOffset)
-          .animation(animation?.delay(0.4))
-      }
-    }
-    .frame(height: diameter)
-    .opacity(state == .waiting ? 1 : 0)
-    .onReceive(timer) { (_) in
-      swap(&self.leftOffset, &self.rightOffset)
-    }
+    LoadingIndicator()
+      .foregroundColor(.white)
+      .frame(width: 10, height: 10)
   }
   
   var animatedText: some View {
@@ -122,14 +94,13 @@ struct WaitToast: View {
         .foregroundColor(.white)
         .opacity(cycles == 4 ? 0 : 1)
         .offset(x: 0, y: -4 * leftOffset)
-        .animation(.easeInOut(duration: 1.6))
       
       Text("This may take a few minutes")
         .font(.subheadline)
         .foregroundColor(.white.opacity(0.6))
         .offset(x: 0, y: -2 * leftOffset)
-        .animation(.easeInOut(duration: 1.6))
     }
+    .animation(.easeInOut(duration: 1.6), value: leftOffset)
     .onReceive(timer) { (_) in
       cycles += 1
       if cycles < 5 { return }

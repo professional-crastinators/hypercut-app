@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F9C56CE22728CAC900C3EF19 /* FocusUI in Frameworks */ = {isa = PBXBuildFile; productRef = F9C56CE12728CAC900C3EF19 /* FocusUI */; };
+		F9C56CE42728CAC900C3EF19 /* HypercutNativeUI in Frameworks */ = {isa = PBXBuildFile; productRef = F9C56CE32728CAC900C3EF19 /* HypercutNativeUI */; };
+		F9C56CE62728CAC900C3EF19 /* ParallaxUI in Frameworks */ = {isa = PBXBuildFile; productRef = F9C56CE52728CAC900C3EF19 /* ParallaxUI */; };
+		F9C56CE82728CD1100C3EF19 /* FocusUI in Frameworks */ = {isa = PBXBuildFile; productRef = F9C56CE72728CD1100C3EF19 /* FocusUI */; };
+		F9C56CEA2728CD1100C3EF19 /* HypercutNativeUI in Frameworks */ = {isa = PBXBuildFile; productRef = F9C56CE92728CD1100C3EF19 /* HypercutNativeUI */; };
+		F9C56CEC2728CD1100C3EF19 /* ParallaxUI in Frameworks */ = {isa = PBXBuildFile; productRef = F9C56CEB2728CD1100C3EF19 /* ParallaxUI */; };
 		F9E08E542723DD68002D7C49 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08E532723DD68002D7C49 /* Tests_iOS.swift */; };
 		F9E08E562723DD68002D7C49 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08E552723DD68002D7C49 /* Tests_iOSLaunchTests.swift */; };
 		F9E08E602723DD68002D7C49 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08E5F2723DD68002D7C49 /* Tests_macOS.swift */; };
@@ -27,35 +33,23 @@
 		F9E08E892723DDD8002D7C49 /* HypercutFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = F9E08E882723DDD8002D7C49 /* HypercutFoundation */; };
 		F9E08E8E272400DC002D7C49 /* VideoDropDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08E8D272400DC002D7C49 /* VideoDropDelegate.swift */; };
 		F9E08E8F272400DC002D7C49 /* VideoDropDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08E8D272400DC002D7C49 /* VideoDropDelegate.swift */; };
-		F9E08E91272405F7002D7C49 /* PanelButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08E90272405F6002D7C49 /* PanelButtonStyle.swift */; };
-		F9E08E92272405F7002D7C49 /* PanelButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08E90272405F6002D7C49 /* PanelButtonStyle.swift */; };
-		F9E08E9427240F15002D7C49 /* PanelSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08E9327240F15002D7C49 /* PanelSlider.swift */; };
-		F9E08E9527240F15002D7C49 /* PanelSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08E9327240F15002D7C49 /* PanelSlider.swift */; };
-		F9E08E97272410D1002D7C49 /* SpeedIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08E96272410D1002D7C49 /* SpeedIndicator.swift */; };
-		F9E08E98272410D1002D7C49 /* SpeedIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08E96272410D1002D7C49 /* SpeedIndicator.swift */; };
-		F9E08E9A27241400002D7C49 /* SpeedSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08E9927241400002D7C49 /* SpeedSlider.swift */; };
-		F9E08E9B27241400002D7C49 /* SpeedSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08E9927241400002D7C49 /* SpeedSlider.swift */; };
 		F9E08E9D27241A52002D7C49 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08E9C27241A52002D7C49 /* Thumbnail.swift */; };
 		F9E08E9E27241A52002D7C49 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08E9C27241A52002D7C49 /* Thumbnail.swift */; };
 		F9E08EA027241D2F002D7C49 /* FileSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08E9F27241D2F002D7C49 /* FileSelector.swift */; };
 		F9E08EA127241D2F002D7C49 /* FileSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08E9F27241D2F002D7C49 /* FileSelector.swift */; };
-		F9E08EA627242B98002D7C49 /* HoverControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08EA527242B97002D7C49 /* HoverControl.swift */; };
-		F9E08EA727242B98002D7C49 /* HoverControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08EA527242B97002D7C49 /* HoverControl.swift */; };
 		F9E08EA927247683002D7C49 /* WaitToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08EA827247682002D7C49 /* WaitToast.swift */; };
 		F9E08EAA27247683002D7C49 /* WaitToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08EA827247682002D7C49 /* WaitToast.swift */; };
 		F9E08EAC27248764002D7C49 /* ProductToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08EAB27248764002D7C49 /* ProductToast.swift */; };
 		F9E08EAD27248764002D7C49 /* ProductToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08EAB27248764002D7C49 /* ProductToast.swift */; };
 		F9E08EAF27248F00002D7C49 /* StartingToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08EAE27248F00002D7C49 /* StartingToast.swift */; };
 		F9E08EB027248F00002D7C49 /* StartingToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08EAE27248F00002D7C49 /* StartingToast.swift */; };
-		F9E08EB22724AA24002D7C49 /* ProgressPanelButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08EB12724AA24002D7C49 /* ProgressPanelButtonStyle.swift */; };
-		F9E08EB32724AA24002D7C49 /* ProgressPanelButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08EB12724AA24002D7C49 /* ProgressPanelButtonStyle.swift */; };
 		F9E08EB52724C99E002D7C49 /* AppFlowState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08EB42724C99E002D7C49 /* AppFlowState.swift */; };
 		F9E08EB62724C99F002D7C49 /* AppFlowState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08EB42724C99E002D7C49 /* AppFlowState.swift */; };
 		F9E08EB82724CBC1002D7C49 /* ContentView+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08EB72724CBC1002D7C49 /* ContentView+Network.swift */; };
 		F9E08EB92724CBC1002D7C49 /* ContentView+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08EB72724CBC1002D7C49 /* ContentView+Network.swift */; };
-		F9E08EBE272516D5002D7C49 /* QualitySelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08EBD272516D5002D7C49 /* QualitySelector.swift */; };
-		F9E08EBF272516D5002D7C49 /* QualitySelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E08EBD272516D5002D7C49 /* QualitySelector.swift */; };
 		F9E91AB42725698900CEF38F /* ui.gif in Resources */ = {isa = PBXBuildFile; fileRef = F9E91AB32725698800CEF38F /* ui.gif */; };
+		F9F0464F2728D5680047AC35 /* AppNetworkingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F0464E2728D5680047AC35 /* AppNetworkingState.swift */; };
+		F9F046502728D5680047AC35 /* AppNetworkingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F0464E2728D5680047AC35 /* AppNetworkingState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,21 +84,15 @@
 		F9E08E612723DD68002D7C49 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		F9E08E772723DD77002D7C49 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		F9E08E8D272400DC002D7C49 /* VideoDropDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDropDelegate.swift; sourceTree = "<group>"; };
-		F9E08E90272405F6002D7C49 /* PanelButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelButtonStyle.swift; sourceTree = "<group>"; };
-		F9E08E9327240F15002D7C49 /* PanelSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelSlider.swift; sourceTree = "<group>"; };
-		F9E08E96272410D1002D7C49 /* SpeedIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedIndicator.swift; sourceTree = "<group>"; };
-		F9E08E9927241400002D7C49 /* SpeedSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedSlider.swift; sourceTree = "<group>"; };
 		F9E08E9C27241A52002D7C49 /* Thumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
 		F9E08E9F27241D2F002D7C49 /* FileSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSelector.swift; sourceTree = "<group>"; };
-		F9E08EA527242B97002D7C49 /* HoverControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoverControl.swift; sourceTree = "<group>"; };
 		F9E08EA827247682002D7C49 /* WaitToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitToast.swift; sourceTree = "<group>"; };
 		F9E08EAB27248764002D7C49 /* ProductToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductToast.swift; sourceTree = "<group>"; };
 		F9E08EAE27248F00002D7C49 /* StartingToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingToast.swift; sourceTree = "<group>"; };
-		F9E08EB12724AA24002D7C49 /* ProgressPanelButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressPanelButtonStyle.swift; sourceTree = "<group>"; };
 		F9E08EB42724C99E002D7C49 /* AppFlowState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowState.swift; sourceTree = "<group>"; };
 		F9E08EB72724CBC1002D7C49 /* ContentView+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView+Network.swift"; sourceTree = "<group>"; };
-		F9E08EBD272516D5002D7C49 /* QualitySelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QualitySelector.swift; sourceTree = "<group>"; };
 		F9E91AB32725698800CEF38F /* ui.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ui.gif; sourceTree = "<group>"; };
+		F9F0464E2728D5680047AC35 /* AppNetworkingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNetworkingState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +100,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9C56CE42728CAC900C3EF19 /* HypercutNativeUI in Frameworks */,
 				F9E08E822723DDCE002D7C49 /* HypercutFoundation in Frameworks */,
+				F9C56CE22728CAC900C3EF19 /* FocusUI in Frameworks */,
 				F9E08E7F2723DDB5002D7C49 /* HypercutMediaEncoder in Frameworks */,
 				F9E08E7C2723DDA8002D7C49 /* HypercutNetworking in Frameworks */,
+				F9C56CE62728CAC900C3EF19 /* ParallaxUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,9 +113,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9C56CEA2728CD1100C3EF19 /* HypercutNativeUI in Frameworks */,
 				F9E08E892723DDD8002D7C49 /* HypercutFoundation in Frameworks */,
+				F9C56CE82728CD1100C3EF19 /* FocusUI in Frameworks */,
 				F9E08E872723DDD8002D7C49 /* HypercutMediaEncoder in Frameworks */,
 				F9E08E852723DDD8002D7C49 /* HypercutNetworking in Frameworks */,
+				F9C56CEC2728CD1100C3EF19 /* ParallaxUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,20 +155,13 @@
 		F9E08E3A2723DD65002D7C49 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				F9F0464D2728D5310047AC35 /* Models */,
 				F9E08E3B2723DD65002D7C49 /* hypercutApp.swift */,
 				F9E08E3C2723DD65002D7C49 /* ContentView.swift */,
 				F9E08EB72724CBC1002D7C49 /* ContentView+Network.swift */,
-				F9E08EB42724C99E002D7C49 /* AppFlowState.swift */,
 				F9E08E9F27241D2F002D7C49 /* FileSelector.swift */,
 				F9E08E9C27241A52002D7C49 /* Thumbnail.swift */,
-				F9E08E90272405F6002D7C49 /* PanelButtonStyle.swift */,
-				F9E08EB12724AA24002D7C49 /* ProgressPanelButtonStyle.swift */,
 				F9E08E8D272400DC002D7C49 /* VideoDropDelegate.swift */,
-				F9E08E9327240F15002D7C49 /* PanelSlider.swift */,
-				F9E08E96272410D1002D7C49 /* SpeedIndicator.swift */,
-				F9E08E9927241400002D7C49 /* SpeedSlider.swift */,
-				F9E08EA527242B97002D7C49 /* HoverControl.swift */,
-				F9E08EBD272516D5002D7C49 /* QualitySelector.swift */,
 				F9E08E772723DD77002D7C49 /* Test.swift */,
 				F9E08EA827247682002D7C49 /* WaitToast.swift */,
 				F9E08EAB27248764002D7C49 /* ProductToast.swift */,
@@ -228,6 +215,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F9F0464D2728D5310047AC35 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F9E08EB42724C99E002D7C49 /* AppFlowState.swift */,
+				F9F0464E2728D5680047AC35 /* AppNetworkingState.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -248,6 +244,9 @@
 				F9E08E7B2723DDA8002D7C49 /* HypercutNetworking */,
 				F9E08E7E2723DDB5002D7C49 /* HypercutMediaEncoder */,
 				F9E08E812723DDCE002D7C49 /* HypercutFoundation */,
+				F9C56CE12728CAC900C3EF19 /* FocusUI */,
+				F9C56CE32728CAC900C3EF19 /* HypercutNativeUI */,
+				F9C56CE52728CAC900C3EF19 /* ParallaxUI */,
 			);
 			productName = "hypercut (iOS)";
 			productReference = F9E08E422723DD68002D7C49 /* hypercut.app */;
@@ -270,6 +269,9 @@
 				F9E08E842723DDD8002D7C49 /* HypercutNetworking */,
 				F9E08E862723DDD8002D7C49 /* HypercutMediaEncoder */,
 				F9E08E882723DDD8002D7C49 /* HypercutFoundation */,
+				F9C56CE72728CD1100C3EF19 /* FocusUI */,
+				F9C56CE92728CD1100C3EF19 /* HypercutNativeUI */,
+				F9C56CEB2728CD1100C3EF19 /* ParallaxUI */,
 			);
 			productName = "hypercut (macOS)";
 			productReference = F9E08E482723DD68002D7C49 /* hypercut.app */;
@@ -350,6 +352,7 @@
 				F9E08E7A2723DDA8002D7C49 /* XCRemoteSwiftPackageReference "hypercut-native-networking" */,
 				F9E08E7D2723DDB5002D7C49 /* XCRemoteSwiftPackageReference "hypercut-native-media-encoder" */,
 				F9E08E802723DDCE002D7C49 /* XCRemoteSwiftPackageReference "hypercut-native-foundation" */,
+				F9C56CE02728CAC900C3EF19 /* XCRemoteSwiftPackageReference "hypercut-native-ui" */,
 			);
 			productRefGroup = F9E08E432723DD68002D7C49 /* Products */;
 			projectDirPath = "";
@@ -403,18 +406,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9E08E8E272400DC002D7C49 /* VideoDropDelegate.swift in Sources */,
-				F9E08E9427240F15002D7C49 /* PanelSlider.swift in Sources */,
-				F9E08EBE272516D5002D7C49 /* QualitySelector.swift in Sources */,
-				F9E08EA627242B98002D7C49 /* HoverControl.swift in Sources */,
-				F9E08E9A27241400002D7C49 /* SpeedSlider.swift in Sources */,
+				F9F0464F2728D5680047AC35 /* AppNetworkingState.swift in Sources */,
 				F9E08EA927247683002D7C49 /* WaitToast.swift in Sources */,
 				F9E08E652723DD68002D7C49 /* ContentView.swift in Sources */,
-				F9E08EB22724AA24002D7C49 /* ProgressPanelButtonStyle.swift in Sources */,
 				F9E08EB52724C99E002D7C49 /* AppFlowState.swift in Sources */,
 				F9E08E632723DD68002D7C49 /* hypercutApp.swift in Sources */,
-				F9E08E97272410D1002D7C49 /* SpeedIndicator.swift in Sources */,
 				F9E08EB82724CBC1002D7C49 /* ContentView+Network.swift in Sources */,
-				F9E08E91272405F7002D7C49 /* PanelButtonStyle.swift in Sources */,
 				F9E08EA027241D2F002D7C49 /* FileSelector.swift in Sources */,
 				F9E08EAF27248F00002D7C49 /* StartingToast.swift in Sources */,
 				F9E08EAC27248764002D7C49 /* ProductToast.swift in Sources */,
@@ -428,18 +425,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9E08E8F272400DC002D7C49 /* VideoDropDelegate.swift in Sources */,
-				F9E08E9527240F15002D7C49 /* PanelSlider.swift in Sources */,
-				F9E08EBF272516D5002D7C49 /* QualitySelector.swift in Sources */,
-				F9E08EA727242B98002D7C49 /* HoverControl.swift in Sources */,
-				F9E08E9B27241400002D7C49 /* SpeedSlider.swift in Sources */,
+				F9F046502728D5680047AC35 /* AppNetworkingState.swift in Sources */,
 				F9E08EAA27247683002D7C49 /* WaitToast.swift in Sources */,
 				F9E08E662723DD68002D7C49 /* ContentView.swift in Sources */,
-				F9E08EB32724AA24002D7C49 /* ProgressPanelButtonStyle.swift in Sources */,
 				F9E08EB62724C99F002D7C49 /* AppFlowState.swift in Sources */,
 				F9E08E642723DD68002D7C49 /* hypercutApp.swift in Sources */,
-				F9E08E98272410D1002D7C49 /* SpeedIndicator.swift in Sources */,
 				F9E08EB92724CBC1002D7C49 /* ContentView+Network.swift in Sources */,
-				F9E08E92272405F7002D7C49 /* PanelButtonStyle.swift in Sources */,
 				F9E08EA127241D2F002D7C49 /* FileSelector.swift in Sources */,
 				F9E08EB027248F00002D7C49 /* StartingToast.swift in Sources */,
 				F9E08EAD27248764002D7C49 /* ProductToast.swift in Sources */,
@@ -862,6 +853,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F9C56CE02728CAC900C3EF19 /* XCRemoteSwiftPackageReference "hypercut-native-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/professional-crastinators/hypercut-native-ui";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		F9E08E7A2723DDA8002D7C49 /* XCRemoteSwiftPackageReference "hypercut-native-networking" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/professional-crastinators/hypercut-native-networking";
@@ -889,6 +888,36 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F9C56CE12728CAC900C3EF19 /* FocusUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9C56CE02728CAC900C3EF19 /* XCRemoteSwiftPackageReference "hypercut-native-ui" */;
+			productName = FocusUI;
+		};
+		F9C56CE32728CAC900C3EF19 /* HypercutNativeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9C56CE02728CAC900C3EF19 /* XCRemoteSwiftPackageReference "hypercut-native-ui" */;
+			productName = HypercutNativeUI;
+		};
+		F9C56CE52728CAC900C3EF19 /* ParallaxUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9C56CE02728CAC900C3EF19 /* XCRemoteSwiftPackageReference "hypercut-native-ui" */;
+			productName = ParallaxUI;
+		};
+		F9C56CE72728CD1100C3EF19 /* FocusUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9C56CE02728CAC900C3EF19 /* XCRemoteSwiftPackageReference "hypercut-native-ui" */;
+			productName = FocusUI;
+		};
+		F9C56CE92728CD1100C3EF19 /* HypercutNativeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9C56CE02728CAC900C3EF19 /* XCRemoteSwiftPackageReference "hypercut-native-ui" */;
+			productName = HypercutNativeUI;
+		};
+		F9C56CEB2728CD1100C3EF19 /* ParallaxUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9C56CE02728CAC900C3EF19 /* XCRemoteSwiftPackageReference "hypercut-native-ui" */;
+			productName = ParallaxUI;
+		};
 		F9E08E7B2723DDA8002D7C49 /* HypercutNetworking */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F9E08E7A2723DDA8002D7C49 /* XCRemoteSwiftPackageReference "hypercut-native-networking" */;

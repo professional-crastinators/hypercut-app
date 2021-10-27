@@ -8,10 +8,11 @@
 import SwiftUI
 import Combine
 import AVFoundation
+import HypercutNativeUI
 
 struct ContentView: View {
   
-  @State var state: AppFlowState = .selectingFile {
+  @State var state: AppFlowState = .editingHypercut {
     didSet {
       if state == .uploadingFile {
         waitToastState = .waiting
@@ -28,14 +29,17 @@ struct ContentView: View {
   @State var originalRuntime: Double?
   @State var fileURL: URL?
   
-  
   @State var request: AnyCancellable?
   @State var exportProgress: CGFloat?
   
   @State var pauseSpeed: CGFloat = 0.7
   @State var phraseSpeed: CGFloat = 0.0
   @State var playbackSpeed: CGFloat = 0.0
-  @State var highQuality: Bool = false
+  @State var qualitySelection: Int = 1
+  
+  var highQuality: Bool {
+    return qualitySelection == 1
+  }
   
   var body: some View {
     HStack(alignment: .top) {
@@ -44,7 +48,7 @@ struct ContentView: View {
         editColumn
       }
     }
-    .animation(.spring())
+    .animation(.spring(), value: state)
     .padding()
     .background(Color.white)
   }
@@ -54,7 +58,8 @@ struct ContentView: View {
       if !state.isSelected {
         StartingToast()
       }
-      FileSelector(fileURL: $fileURL, isDisabled: state.isSelected)
+      FileSelector(fileURL: $fileURL)
+        .disabled(state.isSelected)
       if state.isSelected {
         WaitToast(state: $waitToastState)
       }
@@ -74,7 +79,7 @@ struct ContentView: View {
             Text("Upload")
           }
         }
-        .buttonStyle(PanelButtonStyle())
+        .buttonStyle(PanelButtonStyle(.accentColor))
         .accentColor(
           fileURL == nil ? .gray : .accentColor)
         .disabled(fileURL == nil)
@@ -88,7 +93,7 @@ struct ContentView: View {
             Label("Export Hypercut", systemImage: "square.and.arrow.down.fill")
               .disabled(state != .editingHypercut)
           }
-          .buttonStyle(ProgressPanelButtonStyle(progress: exportProgress, accentColor: state == .editingHypercut ? .accentColor : .gray))
+          .buttonStyle(ProgressPanelButtonStyle(state == .editingHypercut ? .accentColor : .gray, progress: exportProgress))
           .disabled((state, exportProgress).0 != .editingHypercut)
           .frame(maxWidth: 300)
           .accentColor(.init("BonusColor", bundle: .main))
@@ -96,38 +101,75 @@ struct ContentView: View {
       }
     }
     .frame(minWidth: 300)
-    .animation(.spring())
     .padding()
   }
   
   var editColumn: some View {
     VStack(alignment: .leading, spacing: 20) {
-      HoverControl(
-        speed: $pauseSpeed,
-        title: "Shorten Pauses",
-        description: "Reduce the length of pauses.",
-        isDisabled: state != .editingHypercut)
       
-      HoverControl(
-        speed: $phraseSpeed,
-        title: "Remove Phrases",
-        description: "Reduce the number of phrases.",
-        isDisabled: state != .editingHypercut)
+      HoverControl { 
+        VStack(alignment: .leading) {
+          Text("Shorten Pauses")
+            .font(.headline)
+          Text("Reduce the length of pauses.")
+            .font(.subheadline)
+        }
+      } control: {
+        PanelSlider(value: $pauseSpeed) { value in
+          SpeedIndicator(value: pauseSpeed)
+        }
+      }
+      .disabled(state != .editingHypercut)
+
+      HoverControl { 
+        VStack(alignment: .leading) {
+          Text("Remove Phrases")
+            .font(.headline)
+          Text("Reduce the number of phrases.")
+            .font(.subheadline)
+        }
+      } control: { 
+        PanelSlider(value: $phraseSpeed) { value in
+          SpeedIndicator(value: phraseSpeed)
+        }
+      }
+      .disabled(state != .editingHypercut)
       
-      HoverControl(
-        speed: $playbackSpeed,
-        title: "Video Playback",
-        description: "Speed up playback of the entire video by \(playbackSpeedText).",
-        isDisabled: state != .editingHypercut)
+      HoverControl { 
+        VStack(alignment: .leading) {
+          Text("Video Playback")
+            .font(.headline)
+          Text("Speed up playback of the entire video by \(playbackSpeedText).")
+            .font(.subheadline)
+        }
+      } control: { 
+        PanelSlider(value: $playbackSpeed) { value in
+          Text(String(format: "%.2f", value * 3 + 1))
+            .font(.headline)
+            .padding(.horizontal, 8)
+            .foregroundColor(value > 0.08 ? .white : .gray)
+        }
+      }
+      .disabled(state != .editingHypercut)
       
-      QualitySelector(
-        highQuality: $highQuality,
-        title: "Export Quality",
-        description: "This will set the resolution of your file.",
-        isDisabled: state != .editingHypercut)
+      HoverControl { 
+        VStack(alignment: .leading) {
+          Text("Export Quality")
+            .font(.headline)
+          Text("This will set the resolution of your file.")
+            .font(.subheadline)
+        }
+      } control: {
+        PanelSegmentedControl(selection: $qualitySelection) { 
+          Text("Medium")
+          Text("High")
+        }
+      }
+      .disabled(state != .editingHypercut)
       
       if state.isUploaded {
-        ProductToast(isDisabled: state != .editingHypercut, speed: cutSpeed)
+        ProductToast(speed: cutSpeed)
+          .disabled(state != .editingHypercut)
       }
     }
     .frame(width: 340)

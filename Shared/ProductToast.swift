@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProductToast: View {
   
-  var isDisabled: Bool
+  @Environment(\.isEnabled) var isEnabled
   
   var speed: String
   
@@ -20,21 +20,21 @@ struct ProductToast: View {
       VStack(alignment: .leading, spacing: 4) {
         Text("Export Details")
           .font(.headline)
-          .foregroundColor(isDisabled ? .gray : .black)
-        if isDisabled {
-          disabledBody
-        } else {
+          .foregroundColor(isEnabled ? .black : .gray)
+        if isEnabled {
           HStack {
             Spacer()
             summaryBody
             Spacer()
           }
+        } else {
+          disabledBody
         }
         
       }
       .padding(20)
     }
-    .animation(.easeInOut)
+    .animation(.easeInOut, value: isEnabled)
   }
   
   var disabledBody: some View {
@@ -74,6 +74,6 @@ struct ProductToast: View {
 
 struct ProductToast_Previews: PreviewProvider {
   static var previews: some View {
-    ProductToast(isDisabled: false, speed: "2.3x")
+    ProductToast(speed: "2.3x")
   }
 }

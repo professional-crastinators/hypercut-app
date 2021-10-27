@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import HypercutFoundation
 
 enum AppFlowState {
   case selectingFile
@@ -23,11 +22,4 @@ enum AppFlowState {
     if self == .exportingHypercut { return true }
     return false
   }
-}
-
-enum AppNetworkingState {
-  case uploading
-  case canceled(Date)
-  case polling(FileID)
-  case completed(CutResponse)
 }

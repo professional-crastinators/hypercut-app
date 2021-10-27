@@ -13,8 +13,9 @@ import HypercutNetworking
 
 struct FileSelector: View {
   
+  @Environment(\.isEnabled) var isEnabled
+  
   @Binding var fileURL: URL?
-  var isDisabled: Bool
   
   func showOpenPanel() -> URL? {
     let openPanel = NSOpenPanel()
@@ -48,7 +49,7 @@ struct FileSelector: View {
         VStack(spacing: 30) {
           Thumbnail(fileURL: $fileURL)
           
-          if !isDisabled {
+          if isEnabled {
             VStack {
               Text("Drop to replace.")
                 .font(.headline)
